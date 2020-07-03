@@ -1,0 +1,23 @@
+.nav-container{
+    width: 100%;
+    background-color: $base-color;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .logo{
+        height: 35px;
+    }
+    h2{
+        font-size: 20px;
+        font-weight: 300;
+        color: $color-white;
+        margin: 0;
+        margin-left: 10px;
+    }
+    svg{
+        font-size: 20px;
+        margin-left: 20px;
+        color: $color-white;
+    }
+}
