@@ -1,4 +1,9 @@
 .drawer-container{
     height: 100vh;
     width: 300px;
+    transition: all .5s ease-out;
+}
+.drawer-close{
+    width: 0px;
+    transform: translateX(-300px);
 }
