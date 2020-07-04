@@ -13,7 +13,7 @@ import {
   Settings,
 } from "@material-ui/icons";
 import { connect } from "react-redux";
-import { handleDrawer } from "../store/actions/actionCreator";
+import { handleDrawer } from "../actions/actionCreator";
 
 const NavigationBar = (props) => {
   return (

@@ -1,0 +1,46 @@
+.drawer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $color-gray;
+  height: 50px;
+  transition: all 0.2s;
+  cursor: pointer;
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+  span {
+    margin-top: 3px;
+    font-weight: 300;
+  }
+  svg {
+    font-size: 18px;
+  }
+  .icon-space {
+    svg {
+      padding-left: 5px;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+  }
+}
+.drawer-content:hover {
+  color: $base-color;
+}
+.drawer-content:active {
+  background-color: rgba($color: $base-color, $alpha: 0.6);
+  animation: color 0.2s ease-out forwards;
+}
+
+@keyframes color {
+    0%{
+        transform: scale(.01);
+    }
+  80% {
+    transform: scale(.80);
+  }
+  100% {
+    transform:scale(1);
+  }
+}

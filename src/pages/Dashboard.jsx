@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NavigationBar from "../components/NavigationBar";
-import Drawer from "../components/Drawer";
+import Drawer from "../components/drawer/Drawer";
 import { Container, Button, NavLink } from "react-bootstrap";
 import { Home } from "@material-ui/icons";
 class Dashboard extends Component {
