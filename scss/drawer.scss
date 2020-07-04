@@ -2,6 +2,8 @@
     height: 100vh;
     width: 300px;
     transition: all .5s ease-out;
+    background-color: $color-white;
+    z-index: 200;
 }
 .drawer-close{
     width: 0px;
