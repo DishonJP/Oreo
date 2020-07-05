@@ -1,0 +1,86 @@
+[
+    {
+        "id":1,
+        "name":"Cycle",
+        "price":"16.00",
+        "discount":"13.00",
+        "image":"../assets/pillow.png"
+    },
+    {
+        "id":2,
+        "name":"Flower Pot",
+        "price":"12.00",
+        "discount":"11.00",
+        "image":"../assets/flask.png"
+    },
+    {
+        "id":3,
+        "name":"Wood Simple Chair V2",
+        "price":"23.00",
+        "discount":"17.00",
+        "image":"../assets/modChair.png"
+    },
+    {
+        "id":4,
+        "name":"Unero Small Bag",
+        "price":"16.00",
+        "discount":"10.00",
+        "image":"../assets/bag.png"
+    },
+    {
+        "id":5,
+        "name":"Chair",
+        "price":"18.00",
+        "discount":"15.00",
+        "image":"../assets/chair.png"
+    },
+    {
+        "id":6,
+        "name":"Brone Candle",
+        "price":"21.00",
+        "discount":"17.00",
+        "image":"../assets/noIdea.png"
+    },
+    {
+        "id":7,
+        "name":"Headphone",
+        "price":"16.00",
+        "discount":"10.00",
+        "image":"../assets/headphone.png"
+    },
+    {
+        "id":8,
+        "name":"Brone Lamp Glass",
+        "price":"16.00",
+        "discount":"10.00",
+        "image":"../assets/light.png"
+    },
+    {
+        "id":9,
+        "name":"Pen Stand",
+        "price":"16.00",
+        "discount":"10.00",
+        "image":"../assets/penStand.png"
+    },
+    {
+        "id":10,
+        "name":"Pillow",
+        "price":"16.00",
+        "discount":"10.00",
+        "image":"../assets/pillow.png"
+    },
+    {
+        "id":11,
+        "name":"Table Lamp",
+        "price":"16.00",
+        "discount":"10.00",
+        "image":"../assets/tableLamp.png"
+    },
+    {
+        "id":12,
+        "name":"Simple Black Clock",
+        "price":"16.00",
+        "discount":"10.00",
+        "image":"../assets/clock.png"
+    }
+]

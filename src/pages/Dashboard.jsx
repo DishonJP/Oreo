@@ -3,6 +3,9 @@ import NavigationBar from "../components/NavigationBar";
 import Drawer from "../components/drawer/Drawer";
 import { Container, Button, NavLink } from "react-bootstrap";
 import { Home } from "@material-ui/icons";
+import product from '../assets/product.json'
+import bag from '../assets/bag.png'
+
 class Dashboard extends Component {
   render() {
     return (
@@ -31,9 +34,12 @@ class Dashboard extends Component {
                 </Container>
               </div>
             </header>
-            <Button type="button" className="btn btn-outline-light">
-              ooh
-            </Button>
+            {/* <img src={bag} alt=""/> */}
+            <img src={bag} alt=""/>
+            {product.map(el=>{
+              return <img src={el.image} />
+            })}
+            <img src={product[0].image} alt=""/>
           </section>
         </div>
       </div>
