@@ -6,6 +6,18 @@
   height: 50px;
   transition: all 0.2s;
   cursor: pointer;
+  a {
+    text-decoration: none;
+    color: $color-gray;
+    transition: all 0.3s;
+    span {
+      margin-top: 3px;
+      font-weight: 300;
+    }
+  }
+  a:hover {
+    color: $base-color;
+  }
   & > div {
     display: flex;
     align-items: center;
@@ -27,8 +39,14 @@
 }
 .active {
   color: $base-color;
-  span{
+  span {
     font-weight: 500;
+  }
+  a{
+    span{
+      font-weight: 500;
+      color: $base-color;
+    }
   }
 }
 .drawer-content:hover {
@@ -38,16 +56,16 @@
   background-color: rgba($color: $base-color, $alpha: 0.6);
 }
 
-.content-height{
+.content-height {
   height: 40px;
   padding-left: 3px;
 }
 
-.sub-content{
+.sub-content {
   height: 200px;
   overflow: hidden;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
-.hide-content{
+.hide-content {
   height: 0px;
 }

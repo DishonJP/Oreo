@@ -5,8 +5,8 @@ import DrawerSubContent from "./DrawerSubContent";
 import { Home, Apps, ShoppingCart, Layers } from "@material-ui/icons";
 
 const DrawerOreo = (props) => {
-    const [color, setColor] = useState("a");
-    const [contentColor, setContentColor] = useState(null);
+    const [color, setColor] = useState("c");
+    const [contentColor, setContentColor] = useState("l");
     const contentChangeColor = (index) => {
       if (contentColor === index) {
         return "drawer-content content-height active";
@@ -32,26 +32,31 @@ const DrawerOreo = (props) => {
             color={contentChangeColor("a")}
             setColor={() => setContentColor("a")}
             name="Main"
+            link="/dashboard"
           />
           <DrawerSubContent
             color={contentChangeColor("b")}
             setColor={() => setContentColor("b")}
             name="RTL"
+            link="/dashboard"
           />
           <DrawerSubContent
             color={contentChangeColor("c")}
             setColor={() => setContentColor("c")}
             name="Horizontal"
+            link="/dashboard"
           />
           <DrawerSubContent
             color={contentChangeColor("d")}
             setColor={() => setContentColor("d")}
             name="Ecommerce"
+            link="/dashboard"
           />
           <DrawerSubContent
             color={contentChangeColor("e")}
             setColor={() => setContentColor("e")}
             name="Blog"
+            link="/dashboard"
           />
         </DrawerContent>
         <DrawerContent
@@ -64,31 +69,37 @@ const DrawerOreo = (props) => {
             color={contentChangeColor("f")}
             setColor={() => setContentColor("f")}
             name="Inbox"
+            link="/dashboard"
           />
           <DrawerSubContent
             color={contentChangeColor("g")}
             setColor={() => setContentColor("g")}
             name="Chat"
+            link="/dashboard"
           />
           <DrawerSubContent
             color={contentChangeColor("h")}
             setColor={() => setContentColor("h")}
             name="Calendar"
+            link="/dashboard"
           />
           <DrawerSubContent
             color={contentChangeColor("i")}
             setColor={() => setContentColor("i")}
             name="File Manager"
+            link="/dashboard"
           />
           <DrawerSubContent
             color={contentChangeColor("j")}
             setColor={() => setContentColor("j")}
             name="Contact List"
+            link="/dashboard"
           />
           <DrawerSubContent
             color={contentChangeColor("k")}
             setColor={() => setContentColor("k")}
             name="Blog"
+            link="/dashboard"
           />
         </DrawerContent>
         <DrawerContent
@@ -101,21 +112,25 @@ const DrawerOreo = (props) => {
             color={contentChangeColor("l")}
             setColor={() => setContentColor("l")}
             name="Dashboard"
+            link="/dashboard"
           />
           <DrawerSubContent
             color={contentChangeColor("m")}
             setColor={() => setContentColor("m")}
             name="Product"
+            link="/product"
           />
           <DrawerSubContent
             color={contentChangeColor("n")}
             setColor={() => setContentColor("n")}
             name="Product List"
+            link="/dashboard"
           />
           <DrawerSubContent
             color={contentChangeColor("o")}
             setColor={() => setContentColor("o")}
             name="Product detail"
+            link="/dashboard"
           />
         </DrawerContent>
         <DrawerContent

@@ -3,7 +3,7 @@ import products from "../assets/product.json";
 import { Container } from "react-bootstrap";
 import { ShoppingCart, Add } from "@material-ui/icons";
 
-const Product = () => {
+const Products = () => {
   return (
     <Container className="margin-top" fluid>
       {products.map((product) => {
@@ -26,8 +26,8 @@ const Product = () => {
             </div>
             <h5>{product.name}</h5>
             <div className="product-price">
-            <span>${product.price}</span>
-            <span className="color-red">${product.discount}</span>
+              <span>${product.price}</span>
+              <span className="color-red">${product.discount}</span>
             </div>
           </div>
         );
@@ -36,4 +36,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default Products;
