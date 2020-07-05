@@ -4,13 +4,22 @@ import { ChevronRight, ExpandMore } from "@material-ui/icons";
 const DrawerContent = (props) => {
   const [moreMenu, setMoreMenu] = useState(true);
   return (
-    <div className="drawer-content" onClick={() => setMoreMenu(!moreMenu)}>
-      <div>
-      <i className="icon-space">{props.icon}</i>
-      <span>{props.name}</span>
+    <React.Fragment>
+      <div
+        className={props.color}
+        onClick={() => {
+          setMoreMenu(!moreMenu);
+          props.setColor();
+        }}
+      >
+        <div>
+          <i className="icon-space">{props.icon}</i>
+          <span>{props.name}</span>
+        </div>
+        <i>{moreMenu ? <ChevronRight /> : <ExpandMore />}</i>
       </div>
-      <i>{moreMenu ? <ChevronRight /> : <ExpandMore />}</i>
-    </div>
+      <div className={moreMenu ? "sub-content hide-content" : "sub-content"}>{props.children}</div>
+    </React.Fragment>
   );
 };
 

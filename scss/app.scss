@@ -2,8 +2,10 @@
 @import './colors.scss';
 @import './dashboard.scss';
 @import './navigationBar.scss';
-@import './drawer.scss';
-@import './drawerContent.scss';
+@import './drawer/drawer.scss';
+@import './drawer/drawerContent.scss';
+@import './drawer/drawerUser.scss';
+@import './drawer/drawerOreo.scss';
 
 body{
     height: 100%;

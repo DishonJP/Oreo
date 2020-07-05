@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { Home, Person, Apps,ShoppingCart,Layers } from "@material-ui/icons";
-import { Container } from "react-bootstrap";
-import DrawerContent from "./DrawerContent";
+import { Home, Person } from "@material-ui/icons";
+import DrawerOreo from "./DrawerOreo";
+import DrawerUser from "./DrawerUser";
 
 const Drawer = (props) => {
   const [current, setCurrent] = useState(true);
+
   return (
     <div
       className={
@@ -28,13 +29,8 @@ const Drawer = (props) => {
           User
         </button>
       </div>
-      <Container>
-        <span className="font-size">--MAIN</span>
-        <DrawerContent icon={<Home />} name="Dashboard" />
-        <DrawerContent icon={<Apps />} name="App" />
-        <DrawerContent icon={<ShoppingCart />} name="Ecommerce" />
-        <DrawerContent icon={<Layers />} name="User Interface (UI)" />
-      </Container>
+      <DrawerOreo current={current} />
+      <DrawerUser current={current} />
     </div>
   );
 };
