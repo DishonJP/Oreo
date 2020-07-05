@@ -7,12 +7,14 @@
 }
 .body{
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     position: relative;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     transition: all .3s ;
+    background-color: $light-grey;
     &-session{
-        height: 100%;
+        height: max-content;
         width: 100%;
         box-sizing: border-box;
         background-color:$light-grey;
