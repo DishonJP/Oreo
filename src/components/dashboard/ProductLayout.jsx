@@ -1,30 +1,27 @@
-import React from 'react'
+import React from "react";
 import { Container } from "react-bootstrap";
-import {
-  MoreHoriz,
-  Close
-} from "@material-ui/icons";
+import { MoreHoriz, Close } from "@material-ui/icons";
 
 const ProductLayout = (props) => {
-    return (
-        <Container className="container-style">
-        <div className="container-div">
-          <div className="text">
-          <span className="text-span">Product </span>
-          <span>Report</span>
-          </div>
-          <div>
-            <i>
-              <MoreHoriz />
-            </i>
-            <i>
-              <Close />
-            </i>
-          </div>
+  return (
+    <div className="container-style">
+      <div className="container-div">
+        <div className="text">
+          <span className="text-span">{props.name} </span>
+          <span>{props.surName}</span>
         </div>
-        {props.children}
-      </Container>
-    )
-}
+        <div>
+          <i>
+            <MoreHoriz />
+          </i>
+          <i>
+            <Close />
+          </i>
+        </div>
+      </div>
+      {props.children}
+    </div>
+  );
+};
 
-export default ProductLayout
+export default ProductLayout;
