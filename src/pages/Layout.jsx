@@ -5,10 +5,10 @@ import { Container, NavLink } from "react-bootstrap";
 import { Home } from "@material-ui/icons";
 import { withRouter } from "react-router-dom";
 
-const Layout = ({children,match}) => {
-console.log(match);
+const Layout = ({ children, match }) => {
+  console.log(match);
 
-const path=match.path
+  const path = match.path;
   return (
     <div className="dashboard-container">
       <Drawer />
@@ -20,7 +20,7 @@ const path=match.path
               <Container>
                 <div className="flex">
                   <div>
-                    <h2>Product</h2>
+                    <h2>{path.split("/")}</h2>
                     <span>Welcome to Oreo</span>
                   </div>
                   <div className="body-session-header-navigation">

@@ -1,0 +1,34 @@
+.container-style {
+  background-color: $color-white;
+  border-radius: 4px;
+  padding: 15px 0px;
+  margin: 0 30px;
+  width: inherit;
+  .container-div{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    color: #757575;
+    box-sizing: border-box;
+    .text {
+      padding-left: 20px;
+      border-left: 2px solid $color-secondary;
+      margin: 0;
+      span {
+        letter-spacing: 1px;
+      }
+      &-span {
+        font-weight: 500;
+        color: $color-secondary;
+      }
+    }
+    i {
+      cursor: pointer;
+      svg {
+        font-size: 20px;
+        margin-right: 20px;
+      }
+    }
+  }
+}

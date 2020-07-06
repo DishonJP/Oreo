@@ -5,7 +5,7 @@ import Product from './pages/Product'
 const App = () => (
     <Router>
         <Switch>
-            <Route path='/dashboard' exact component={Dashboard} />
+            <Route path='/Dashboard' exact component={Dashboard} />
             <Route path='/Product' component={Product} />
         </Switch>
     </Router>
