@@ -1,22 +1,31 @@
-import React from "react";
-import { Container } from "react-bootstrap";
+import React, { useState } from "react";
 import { MoreHoriz, Close } from "@material-ui/icons";
 
 const ProductLayout = (props) => {
+  const [display, setDisplay] = useState(true);
   return (
-    <div className="container-style">
+    <div
+      className={display ? "container-style" : "container-style display-none"}
+      style={{
+        width: props.width ? props.width : null,
+      }}
+    >
       <div className="container-div">
         <div className="text">
           <span className="text-span">{props.name} </span>
           <span>{props.surName}</span>
         </div>
         <div>
-          <i>
-            <MoreHoriz />
-          </i>
-          <i>
-            <Close />
-          </i>
+          {!props.close ? (
+            <i>
+              <MoreHoriz />
+            </i>
+          ) : null}
+          {!props.close ? (
+            <i onClick={() => setDisplay(false)}>
+              <Close />
+            </i>
+          ) : null}
         </div>
       </div>
       {props.children}

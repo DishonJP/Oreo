@@ -1,0 +1,17 @@
+.analize-container {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  .analize-text {
+    margin-left: 22px;
+    color: $dark-grey;
+    margin-top: 25px;
+    h2 {
+      font-weight: 400;
+    }
+    span {
+      font-size: 15px;
+      font-weight: 300;
+    }
+  }
+}

@@ -6,7 +6,7 @@ import { Bar } from "react-chartjs-2";
 const ProductReport = () => {
   const mobile = [1, 2, 6, 5, 5, 5, 6, 9, 0, 6, 6, 2];
   const laptop = [0, 1, 3, 5, 1, 2, 2, 3, 4, 6, 6, 5];
-  const tablet = [1, 2, 3, 4, 1, 2, 2, 4, 4, 4, 4, 4];
+  const tablet = [1, 2, 3, 4, 1, 2, 2, 0, 4, 0, 3, 4];
   const version = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
   const data = {
     labels: version,
