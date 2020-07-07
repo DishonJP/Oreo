@@ -1,0 +1,149 @@
+@mixin fontSize {
+  font-size: 16px;
+  padding-left: 10px;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+.list-container {
+  padding: 20px;
+  background-color: $color-white;
+  position: relative;
+  top: -90px;
+  margin: 0 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  &-head {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    h1 {
+      width: 10%;
+      @include fontSize;
+    }
+    h2 {
+      width: 20%;
+      @include fontSize;
+    }
+    h3 {
+      width: 30%;
+      @include fontSize;
+    }
+    h4 {
+      width: 10%;
+      @include fontSize;
+    }
+    h5 {
+      width: 15%;
+      @include fontSize;
+    }
+    h6 {
+      width: 15%;
+      @include fontSize;
+    }
+  }
+  &-body {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.4s;
+    &-image {
+      width: 10%;
+      img {
+        height: 50px;
+        width: 50px;
+      }
+    }
+    h6 {
+      width: 20%;
+      align-self: center;
+      font-weight: 400;
+      letter-spacing: 1px;
+      padding-left: 3px;
+    }
+    .detail-text {
+      color: $medium-grey;
+      font-weight: 300;
+      width: 30%;
+      padding-left: 3px;
+    }
+    h5 {
+      font-size: 16px;
+      font-weight: 300;
+      width: 10%;
+      padding-left: 15px;
+    }
+    .green {
+      width: 15%;
+      padding-left: 15px;
+      color: lightgreen;
+    }
+    .warning {
+      width: 15%;
+      padding-left: 15px;
+      color: orange;
+    }
+    .danger {
+      width: 15%;
+      padding-left: 15px;
+      color: orangered;
+    }
+    i {
+      padding: 12px 17px;
+      background-color: $color-gray;
+      border-radius: 4px;
+      color: $color-white;
+      margin-left: 8px;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    i:hover {
+      opacity: 0.8;
+    }
+    i:active {
+      background-color: $color-secondary;
+    }
+  }
+  &-body:hover {
+    background-color: $light-grey;
+  }
+}
+
+.bottom-nav {
+  margin: 0 20px;
+  margin-top: -40px;
+  margin-bottom: 40px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: $color-white;
+  color: black;
+  display: flex;
+  align-items: center;
+  i {
+    padding: 5px 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.4s;
+    cursor: pointer;
+    svg {
+      font-size: 14px;
+    }
+  }
+  i:hover {
+    background-color: $light-grey;
+  }
+  div {
+    padding: 5px 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.4s;
+    cursor: pointer;
+  }
+  .color {
+    background-color: #f96332;
+    color: $color-white;
+  }
+  div:hover {
+    background-color: $light-grey;
+  }
+}

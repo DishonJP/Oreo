@@ -4,83 +4,107 @@
         "name":"Cycle",
         "price":"16.00",
         "discount":"13.00",
-        "image":"../assets/cycle.png"
+        "image":"../assets/cycle.png",
+        "stock":"In Stock",
+        "detail":"randomised words even slightly believable"
     },
     {
         "id":2,
         "name":"Flower Pot",
         "price":"12.00",
         "discount":"11.00",
-        "image":"../assets/flask.png"
+        "image":"../assets/flask.png",
+        "stock":"In Stock",
+        "detail":"It is a long established will be distracted"
     },
     {
         "id":3,
         "name":"Wood Simple Chair V2",
         "price":"23.00",
         "discount":"17.00",
-        "image":"../assets/modChair.png"
+        "image":"../assets/modChair.png",
+        "stock":"Low Stock",
+        "detail":"There passages of Lorem Ipsum available"
     },
     {
         "id":4,
         "name":"Unero Small Bag",
         "price":"16.00",
         "discount":"10.00",
-        "image":"../assets/bag.png"
+        "image":"../assets/bag.png",
+        "stock":"Out of Stock",
+        "detail":"It is a long established fact that a distracted"
     },
     {
         "id":5,
         "name":"Chair",
         "price":"18.00",
         "discount":"15.00",
-        "image":"../assets/chair.png"
+        "image":"../assets/chair.png",
+        "stock":"In Stock",
+        "detail":"Contrary to popular belief, simply random text"
     },
     {
         "id":6,
         "name":"Brone Candle",
         "price":"21.00",
         "discount":"17.00",
-        "image":"../assets/noIdea.png"
+        "image":"../assets/noIdea.png",
+        "stock":"Low Stock",
+        "detail":"All the Lorem Ipsum generators on predefined chunks"
     },
     {
         "id":7,
         "name":"Headphone",
         "price":"16.00",
         "discount":"10.00",
-        "image":"../assets/headphone.png"
+        "image":"../assets/headphone.png",
+        "stock":"In Stock",
+        "detail":"established fact that a be distracted"
     },
     {
         "id":8,
         "name":"Brone Lamp Glass",
         "price":"16.00",
         "discount":"10.00",
-        "image":"../assets/light.png"
+        "image":"../assets/light.png",
+        "stock":"Out of Stock",
+        "detail":"established fact that a be distracted"
     },
     {
         "id":9,
         "name":"Pen Stand",
         "price":"16.00",
         "discount":"10.00",
-        "image":"../assets/penStand.png"
+        "image":"../assets/penStand.png",
+        "stock":"Low Stock",
+        "detail":"established fact that a be distracted"
     },
     {
         "id":10,
         "name":"Pillow",
         "price":"16.00",
         "discount":"10.00",
-        "image":"../assets/pillow.png"
+        "image":"../assets/pillow.png",
+        "stock":"Low Stock",
+        "detail":"established fact that a be distracted"
     },
     {
         "id":11,
         "name":"Table Lamp",
         "price":"16.00",
         "discount":"10.00",
-        "image":"../assets/tableLamp.png"
+        "image":"../assets/tableLamp.png",
+        "stock":"Out of Stock",
+        "detail":"established fact that a be distracted"
     },
     {
         "id":12,
         "name":"Simple Black Clock",
         "price":"16.00",
         "discount":"10.00",
-        "image":"../assets/clock.png"
+        "image":"../assets/clock.png",
+        "stock":"In Stock",
+        "detail":"established fact that a be distracted"
     }
 ]

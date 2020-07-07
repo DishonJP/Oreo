@@ -6,7 +6,6 @@ import { Home } from "@material-ui/icons";
 import { withRouter } from "react-router-dom";
 
 const Layout = ({ children, match }) => {
-  console.log(match);
 
   const path = match.path;
   return (
