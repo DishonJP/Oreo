@@ -132,7 +132,7 @@ const DrawerOreo = (props) => {
           color={contentChangeColor("o")}
           setColor={() => props.changeSubContent("o")}
           name="Product detail"
-          link="/dashboard"
+          link="/productdetail"
         />
       </DrawerContent>
       <DrawerContent
