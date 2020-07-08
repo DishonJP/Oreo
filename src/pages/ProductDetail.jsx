@@ -8,15 +8,85 @@ const ProductDetail = () => {
     products.filter((el, index) => index < 5)
   );
   const [currentProduct, setCurrentProduct] = useState(product[0].image);
-  const [animate,setAnimate]=useState(true)
+  const [animate, setAnimate] = useState(true);
+  const [current, setCurrent] = useState("a");
+  const setActive = (value) => {
+    if (value === current) {
+      return "active-div";
+    }
+    return null;
+  };
+  const dynamicContent = (value) => {
+    switch (value) {
+      case "a":
+        return (
+          <div className="description">
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto itaque accusamus ullam delectus excepturi cupiditate
+              sit corporis aliquid quidem aut quae, doloremque veritatis eius
+              molestiae, consequuntur dolores nobis amet dignissimos.
+            </span>
+            <span className="description-margin">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+              voluptatem nulla nesciunt eum accusantium impedit adipisci quasi
+              quae nam, accusamus omnis perspiciatis cum, reiciendis molestias
+              beatae vel. Eos, beatae corrupti?
+            </span>
+          </div>
+        );
+      case "b":
+        return (
+          <div className="review">
+            <img src="../assets/avatar2.jpg" alt="" />
+            <div>
+              <h4>Hossein Shams</h4>
+              <span>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis distinctio nostrum minima culpa nemo totam
+                voluptatibus.
+              </span>
+              <div>
+                <div>IPHONE 8</div>
+                <div className="detail-container-data-rating">
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                  <StarBorder className="color" />
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      case "c":
+        return (
+          <div className="about">
+            <h6>WHERE DOES IT COME FROM?</h6>
+            <span>
+              Contrary to popular belief, Lorem Ipsum is not simply random text.
+              It has roots in a piece of classical Latin literature from 45 BC,
+              making it over 2000 years old. Richard McClintock, a Latin
+              professor at Hampden-Sydney College in Virginia, looked up one of
+              the more obscure Latin words, consectetur, from a Lorem Ipsum
+              passage, and going through the cites of the word in classical
+              literature, discovered the undoubtable source.
+            </span>
+          </div>
+        );
+
+      default:
+        return null;
+    }
+  };
   return (
     <Layout>
       <div className="detail-container">
         <div className="detail-container-images">
           <div className="image">
             <img
-            onAnimationEnd={()=>setAnimate(false)}
-              className={animate?"animate":null}
+              onAnimationEnd={() => setAnimate(false)}
+              className={animate ? "animate" : null}
               src={currentProduct}
               alt="a"
             />
@@ -29,7 +99,7 @@ const ProductDetail = () => {
                   className={prod.image === currentProduct ? "active" : null}
                   onClick={() => {
                     setCurrentProduct(prod.image);
-                    setAnimate(true)
+                    setAnimate(true);
                   }}
                   src={prod.image}
                   alt="a"
@@ -75,9 +145,9 @@ const ProductDetail = () => {
           <div className="detail-container-data-color">
             <h3>colors:</h3>
             <div className="flex">
-            <div className="yellow"></div>
-            <div className="green"></div>
-            <div className="blue"></div>
+              <div className="yellow"></div>
+              <div className="green"></div>
+              <div className="blue"></div>
             </div>
           </div>
           <div className="detail-container-data-button">
@@ -88,6 +158,18 @@ const ProductDetail = () => {
           </div>
         </div>
       </div>
+      <section className="session-one">
+        <div className={setActive("a")} onClick={() => setCurrent("a")}>
+          Description
+        </div>
+        <div className={setActive("b")} onClick={() => setCurrent("b")}>
+          Review
+        </div>
+        <div className={setActive("c")} onClick={() => setCurrent("c")}>
+          About
+        </div>
+      </section>
+      <section className="session-two">{dynamicContent(current)}</section>
     </Layout>
   );
 };

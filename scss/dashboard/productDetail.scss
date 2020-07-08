@@ -41,6 +41,7 @@
         transition: all 0.3s;
         margin-bottom: 0px;
         padding-right: 0px;
+        cursor: pointer;
       }
       .active {
         border: 1px solid $color-primary;
@@ -89,6 +90,7 @@
     p {
       font-weight: 300;
       color: $medium-grey;
+      line-height: 160%;
     }
     &-text {
       margin-bottom: 15px;
@@ -175,6 +177,7 @@
         background-color: $color-primary;
         border-radius: 50%;
         color: $color-white;
+        cursor: pointer;
         svg {
           font-size: 16px;
         }
@@ -182,6 +185,42 @@
       i:hover {
         opacity: 0.8;
       }
+    }
+  }
+}
+.session-one{
+  margin: 0 20px;
+  margin-top: -60px;
+  background-color: $color-white;
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  div{
+    padding: 10px 15px;
+    border:1px solid $color-white;
+    transition: all .4s;
+    margin-right: 10px;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+  .active-div{
+    border-color: $color-primary;
+  }
+}
+.session-two{
+  margin: 20px 20px;
+  background-color: $color-white;
+  border-radius: 4px;
+  padding: 20px;
+  .description{
+    display: flex;
+    flex-direction: column;
+    span{
+      color: $dark-grey;
+      font-weight: 300;
+    }
+    &-margin{
+      margin-top: 20px;
     }
   }
 }
