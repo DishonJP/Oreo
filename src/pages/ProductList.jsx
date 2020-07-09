@@ -3,8 +3,12 @@ import Layout from "./Layout";
 import { Divider } from "@material-ui/core";
 import products from "../assets/product.json";
 import { Edit, Delete, ArrowBack, ArrowForward } from "@material-ui/icons";
+import { connect } from "react-redux";
+import { removeProduct } from "../actions/actionCreator";
 
-const ProductList = () => {
+const ProductList = (props) => {
+  console.log(props.productList);
+  
   const setColor = (name) => {
     switch (name) {
       case "In Stock":
@@ -30,9 +34,9 @@ const ProductList = () => {
           <h6>Action</h6>
         </div>
         <Divider />
-        {products.map((product) => {
+        {props.productList.map((product) => {
           return (
-            <React.Fragment>
+            <React.Fragment key={product.id}>
               <Divider />
               <div className="list-container-body">
                 <div className="list-container-body-image">
@@ -46,7 +50,9 @@ const ProductList = () => {
                   <i>
                     <Edit />
                   </i>
-                  <i>
+                  <i onClick={() => {
+                    props.handleDelete(product.id)
+                  }}>
                     <Delete />
                   </i>
                 </div>
@@ -71,4 +77,16 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
+const mapStateToProps = state => {
+  return {
+    productList: state.productList
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    handleDelete: (id) => dispatch(removeProduct(id))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductList);

@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import Layout from "./Layout";
 import products from "../assets/product.json";
 import { Star, StarBorder, Favorite } from "@material-ui/icons";
+import { connect } from "react-redux";
 
-const ProductDetail = () => {
+const ProductDetail = (props) => {
+  console.log(props.currentProduct);
+  
   const [product, setProduct] = useState(
     products.filter((el, index) => index < 5)
   );
-  const [currentProduct, setCurrentProduct] = useState(product[0].image);
+  const [currentProduct, setCurrentProduct] = useState(props.currentProduct);
   const [animate, setAnimate] = useState(true);
   const [current, setCurrent] = useState("a");
   const setActive = (value) => {
@@ -87,7 +90,7 @@ const ProductDetail = () => {
             <img
               onAnimationEnd={() => setAnimate(false)}
               className={animate ? "animate" : null}
-              src={currentProduct}
+              src={currentProduct.image}
               alt="a"
             />
           </div>
@@ -96,9 +99,9 @@ const ProductDetail = () => {
               return (
                 <img
                   key={prod.id}
-                  className={prod.image === currentProduct ? "active" : null}
+                  className={prod.image === currentProduct.image ? "active" : null}
                   onClick={() => {
-                    setCurrentProduct(prod.image);
+                    setCurrentProduct(prod);
                     setAnimate(true);
                   }}
                   src={prod.image}
@@ -109,10 +112,10 @@ const ProductDetail = () => {
           </div>
         </div>
         <div className="detail-container-data">
-          <h1>Cycle</h1>
+          <h1>{currentProduct.name}</h1>
           <div className="detail-container-data-price">
             <h2>Current Price:</h2>
-            <h2 className="warning">$180</h2>
+          <h2 className="warning">${currentProduct.price}</h2>
           </div>
           <div className="detail-container-data-rating">
             <Star />
@@ -173,5 +176,9 @@ const ProductDetail = () => {
     </Layout>
   );
 };
-
-export default ProductDetail;
+const mapStateToProps=state=>{
+  return{
+    currentProduct:state.currentProduct
+  }
+}
+export default connect(mapStateToProps)(ProductDetail);

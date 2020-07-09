@@ -1,11 +1,14 @@
 import * as actionTypes from '../actions/actionTypes'
+import products from '../assets/product.json'
 
 const initialState = {
     openDrawer: true,
     drawer: {
         content: "c",
         subContent: "l"
-    }
+    },
+    currentProduct: products[0],
+    productList:[]
 }
 
 const homeReducer = (state = initialState, action) => {
@@ -31,6 +34,22 @@ const homeReducer = (state = initialState, action) => {
                     subContent: action.payload
                 }
             }
+        case actionTypes.CURRENT_PRODUCT:
+            return {
+                ...state,
+                currentProduct: products.find(product => product.id === action.payload)
+            }
+        case actionTypes.ADD_PRODUCT:
+            return{
+                ...state,
+                productList:[...state.productList,action.payload]
+            }
+        case actionTypes.REMOVE_PRODUCT:
+            const filterData=state.productList.filter(product=>product.id!==action.payload)
+            return{
+                ...state,
+                productList:filterData
+            }        
         default:
             return state;
     }

@@ -19,3 +19,24 @@ export const activeSubContent = (index) => {
         payload: index
     }
 }
+
+export const setCurrentProduct=(id)=>{
+    return{
+        type:actionTypes.CURRENT_PRODUCT,
+        payload:id
+    }
+}
+
+export const addProduct=(product)=>{
+    return{
+        type:actionTypes.ADD_PRODUCT,
+        payload:product
+    }
+}
+
+export const removeProduct=(id)=>{
+    return {
+        type:actionTypes.REMOVE_PRODUCT,
+        payload:id
+    }
+}
