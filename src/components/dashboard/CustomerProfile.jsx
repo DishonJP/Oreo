@@ -8,9 +8,13 @@ const CustomerProfile = () => {
     return (
         <div className="profile-container">
             <ProductLayout name="New" surname="Customer Rating" width="57%">
-            <Customer name="HOSSEIN SHAMS" model="IPhone 8" image="../assets/sans.jpg"/>
-            <Customer name="TIM HANK" model="Nokia 8" image="../assets/tim.jpg"/>
-            <Customer name="MARYAM AMIRI" model="HTC U11" image="../assets/hos.jpg"/>
+                <div style={{padding:"20px"}}>
+                <Customer name="HOSSEIN SHAMS" model="IPhone 8" image="../assets/sans.jpg" />
+                <Divider />
+                <Customer name="TIM HANK" model="Nokia 8" image="../assets/tim.jpg" />
+                <Divider />
+                <Customer name="MARYAM AMIRI" model="HTC U11" image="../assets/hos.jpg" />
+                </div>
             </ProductLayout>
             <div className="users-container">
                 <div className="users-container-header">

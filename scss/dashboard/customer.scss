@@ -1,0 +1,27 @@
+.customer{
+    display: flex;
+    padding-top: 10px;
+    img{
+        height: 100px;
+        width: 100px;
+        margin-right: 20px;
+    }
+    &-detail{
+        display: flex;
+        padding-bottom: 10px;
+        div{
+            margin-bottom: 0px;
+        }
+        &-model{
+            padding: 2px;
+            border: 1px solid $color-secondary;
+            margin-right: 20px;
+            display: block;
+            color: $color-secondary;
+            border-radius: 4px;
+        }
+    }
+}
+.customer:hover{
+    background-color: $light-grey;
+}
