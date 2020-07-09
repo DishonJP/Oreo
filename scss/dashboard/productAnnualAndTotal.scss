@@ -3,3 +3,28 @@
     justify-content: space-between;
     padding: 20px;
 }
+.donut{
+    h2{
+        text-align: center;
+        color: $dark-grey;
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 28px;
+    }
+    h6{
+        text-align: center;
+    }
+    h5{
+        text-align: center;
+        color: $dark-grey;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    span{
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+        font-weight: 300;
+        font-size: 14px;
+    }
+}
