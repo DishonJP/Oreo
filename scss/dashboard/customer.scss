@@ -1,16 +1,36 @@
 .customer{
     display: flex;
     padding-top: 10px;
+        div{
+
+            overflow: hidden;
+            h4{
+                font-size: 17px;
+                color: $medium-grey;
+                margin-bottom: 0px;
+            }
+            span{
+                font-weight: 300;
+                color: $medium-grey;
+                white-space: nowrap; 
+                overflow: scroll;
+            }
+        }
     img{
-        height: 100px;
-        width: 100px;
+        height: 50px;
+        width: 50px;
         margin-right: 20px;
+        border-radius: 4px;
+        align-self: center;
     }
     &-detail{
         display: flex;
         padding-bottom: 10px;
         div{
             margin-bottom: 0px;
+        }
+        &-star{
+            width: 100px;
         }
         &-model{
             padding: 2px;

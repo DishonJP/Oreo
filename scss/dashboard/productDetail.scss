@@ -224,3 +224,22 @@
     }
   }
 }
+
+@media screen and (max-width: 425px) {
+  .detail-container{
+    flex-direction: column;
+    &-images {
+      width: 100%;
+      div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+      }
+    }
+    &-data{
+      width: 100%;
+    }
+  }
+  .session-one{
+    overflow-y: scroll;
+  }
+}

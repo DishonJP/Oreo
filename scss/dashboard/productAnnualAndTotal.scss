@@ -28,3 +28,12 @@
         font-size: 14px;
     }
 }
+
+@media screen and (max-width: 425px) {
+    .annual-container{
+        flex-direction: column;
+        .container-style{
+            width: 100% !important;
+        }
+    }
+  }

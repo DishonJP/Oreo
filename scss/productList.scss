@@ -88,20 +88,23 @@
       padding-left: 15px;
       color: orangered;
     }
-    i {
-      padding: 12px 17px;
-      background-color: $color-gray;
-      border-radius: 4px;
-      color: $color-white;
-      margin-left: 8px;
-      transition: all 0.3s;
-      cursor: pointer;
-    }
-    i:hover {
-      opacity: 0.8;
-    }
-    i:active {
-      background-color: $color-secondary;
+    div {
+      display: flex;
+      i {
+        padding: 12px 17px;
+        background-color: $color-gray;
+        border-radius: 4px;
+        color: $color-white;
+        margin-left: 8px;
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+      i:hover {
+        opacity: 0.8;
+      }
+      i:active {
+        background-color: $color-secondary;
+      }
     }
   }
   &-body:hover {
@@ -145,5 +148,62 @@
   }
   div:hover {
     background-color: $light-grey;
+  }
+}
+@media screen and (max-width: 425px) {
+  .list-container {
+    overflow-x: scroll;
+    &-head {
+      width: 768px;
+
+      h1 {
+        min-width: 65px;
+      }
+      h2 {
+        min-width: 130px;
+      }
+      h3 {
+        min-width: 195px;
+      }
+      h4 {
+        min-width: 65px;
+      }
+      h5 {
+        min-width: 97.5px;
+      }
+      h6 {
+        min-width: 97.5px;
+      }
+    }
+    &-body {
+      width: 768px;
+      &-image {
+        width: 65px;
+      }
+      h6 {
+        width: 130px;
+      }
+      .detail-text {
+        width: 195px;
+        display: block;
+      }
+      h5 {
+        width: 65px;
+      }
+      .green {
+        width: 130px;
+      }
+      .warning {
+        width: 130px;
+      }
+      .danger {
+        width: 130px;
+      }
+      div {
+        i {
+          padding: 8px 13px;
+        }
+      }
+    }
   }
 }

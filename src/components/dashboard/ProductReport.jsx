@@ -82,7 +82,7 @@ const ProductReport = () => {
       <div style={{
         padding:"20px"
       }}>
-      <Bar height="130px" data={data} options={option} />
+      <Bar height="200px" data={data} options={option} />
       </div>
     </ProductLayout>
   );

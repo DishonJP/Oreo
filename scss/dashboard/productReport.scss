@@ -35,3 +35,12 @@
         }
     }
 }
+
+@media screen and (max-width: 425px) {
+    .report{
+        flex-direction: column;
+        &-div{
+            width: 160px;
+        }
+    }
+  }

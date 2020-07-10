@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "./Layout";
 import { Divider } from "@material-ui/core";
-import products from "../assets/product.json";
 import { Edit, Delete, ArrowBack, ArrowForward } from "@material-ui/icons";
 import { connect } from "react-redux";
 import { removeProduct } from "../actions/actionCreator";

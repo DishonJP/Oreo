@@ -14,7 +14,7 @@ const Customer = ({ name, model, image }) => {
               </span>
         <div className="customer-detail">
           <div className="customer-detail-model">{model}</div>
-          <div className="detail-container-data-rating">
+          <div className="detail-container-data-rating customer-detail-star">
             <Star />
             <Star />
             <Star />

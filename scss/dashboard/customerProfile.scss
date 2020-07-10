@@ -74,3 +74,18 @@
     }
   }
 }
+
+@media screen and (max-width: 425px) {
+  .profile-container{
+    flex-direction: column;
+    .container-style{
+      width: 90% !important;
+      margin: 20px auto;
+    }
+    .users-container{
+      width: 90%;
+      margin: 0 auto;
+
+    }
+  }
+}
