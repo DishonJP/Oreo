@@ -8,7 +8,8 @@ const initialState = {
         subContent: "l"
     },
     currentProduct: products[0],
-    productList:[]
+    productList:[],
+    search:""
 }
 
 const homeReducer = (state = initialState, action) => {
@@ -49,7 +50,13 @@ const homeReducer = (state = initialState, action) => {
             return{
                 ...state,
                 productList:filterData
-            }        
+            }
+        case actionTypes.SEARCH:
+            console.log(action.payload);
+            return{
+                ...state,
+                search:action.payload
+            }            
         default:
             return state;
     }

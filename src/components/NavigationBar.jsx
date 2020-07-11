@@ -13,7 +13,7 @@ import {
   Settings,
 } from "@material-ui/icons";
 import { connect } from "react-redux";
-import { handleDrawer } from "../actions/actionCreator";
+import { handleDrawer, search } from "../actions/actionCreator";
 
 const NavigationBar = (props) => {
   return (
@@ -40,9 +40,13 @@ const NavigationBar = (props) => {
           <Flag />
         </i>
         <div className="search-box">
-          <input placeholder="Search..." />
+          <input placeholder="Search..." value={props.search} onChange={(e)=>{
+            console.log(e.target.value);
+            props.handleSearch(e.target.value)
+          }} />
           <i>
             <Search />
+            
           </i>
         </div>
       </div>
@@ -60,7 +64,14 @@ const NavigationBar = (props) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     handleDrawer: () => dispatch(handleDrawer()),
+    handleSearch:(value)=>dispatch(search(value))
   };
 };
 
-export default connect(null, mapDispatchToProps)(NavigationBar);
+const mapStateToProps=(state)=>{
+  return{
+    search:state.search
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavigationBar);

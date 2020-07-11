@@ -7,7 +7,7 @@ import { removeProduct } from "../actions/actionCreator";
 
 const ProductList = (props) => {
   console.log(props.productList);
-  
+
   const setColor = (name) => {
     switch (name) {
       case "In Stock":
@@ -22,6 +22,9 @@ const ProductList = (props) => {
   };
   return (
     <Layout>
+      <div className="loading-page">
+        <img src="../assets/logo.svg" alt="O" />
+      </div>
       <div className="list-container">
         <Divider />
         <div className="list-container-head">

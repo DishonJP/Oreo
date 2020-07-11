@@ -40,3 +40,10 @@ export const removeProduct=(id)=>{
         payload:id
     }
 }
+
+export const search=(char)=>{
+    return{
+        type:actionTypes.SEARCH,
+        payload:char
+    }
+}

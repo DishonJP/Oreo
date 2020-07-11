@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 
 const ProductDetail = (props) => {
   console.log(props.currentProduct);
-  
+
   const [product, setProduct] = useState(
     products.filter((el, index) => index < 5)
   );
@@ -84,6 +84,9 @@ const ProductDetail = (props) => {
   };
   return (
     <Layout>
+      <div className="loading-page">
+        <img src="../assets/logo.svg" alt="O" />
+      </div>
       <div className="detail-container">
         <div className="detail-container-images">
           <div className="image">
@@ -115,7 +118,7 @@ const ProductDetail = (props) => {
           <h1>{currentProduct.name}</h1>
           <div className="detail-container-data-price">
             <h2>Current Price:</h2>
-          <h2 className="warning">${currentProduct.price}</h2>
+            <h2 className="warning">${currentProduct.price}</h2>
           </div>
           <div className="detail-container-data-rating">
             <Star />
@@ -176,9 +179,9 @@ const ProductDetail = (props) => {
     </Layout>
   );
 };
-const mapStateToProps=state=>{
-  return{
-    currentProduct:state.currentProduct
+const mapStateToProps = state => {
+  return {
+    currentProduct: state.currentProduct
   }
 }
 export default connect(mapStateToProps)(ProductDetail);

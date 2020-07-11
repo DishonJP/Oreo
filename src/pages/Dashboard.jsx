@@ -9,6 +9,9 @@ import CustomerProfile from "../components/dashboard/CustomerProfile";
 const Dashboard = () => {
   return (
     <Layout>
+        <div className="loading-page">
+            <img src="../assets/logo.svg" alt="O"/>
+        </div>
       <div style={{ top: "-110px", position: "relative" }}>
         <ProductReport />
         <ProductAnalize />

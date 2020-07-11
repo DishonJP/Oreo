@@ -24,3 +24,38 @@ body{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
+.loading-page{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: $base-color;
+    position: fixed;
+    z-index: 900;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    img{
+        animation: spin 1.5s linear infinite;
+    }
+    animation: displayNone 2s;
+}
+@keyframes displayNone{
+    0%{
+        opacity: 1;
+        visibility: visible;
+    }
+    90%{
+        opacity: 1;
+        visibility: visible;
+    }
+    99%{
+        opacity: .1;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
