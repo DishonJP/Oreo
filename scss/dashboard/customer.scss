@@ -12,8 +12,8 @@
             span{
                 font-weight: 300;
                 color: $medium-grey;
-                white-space: nowrap; 
-                overflow: scroll;
+                // white-space: nowrap; 
+                // overflow: scroll;
             }
         }
     img{
@@ -44,4 +44,14 @@
 }
 .customer:hover{
     background-color: $light-grey;
+}
+
+@media screen and (max-width: 425px) {
+    .customer{
+        &-detail{
+            &-model{
+                font-size: 12px;
+            }
+        }
+    }
 }

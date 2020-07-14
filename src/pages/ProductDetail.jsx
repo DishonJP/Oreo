@@ -40,27 +40,27 @@ const ProductDetail = (props) => {
         );
       case "b":
         return (
-          <div className="review">
-            <img src="../assets/avatar2.jpg" alt="" />
-            <div>
-              <h4>Hossein Shams</h4>
-              <span>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Officiis distinctio nostrum minima culpa nemo totam
-                voluptatibus.
+          <div className="customer">
+      <img src="../assets/avatar2.jpg" alt="H" />
+      <div>
+        <h4>Hossien Shams</h4>
+        <span>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Officiis distinctio nostrum minima culpa nemo totam
+          voluptatibus.
               </span>
-              <div>
-                <div>IPHONE 8</div>
-                <div className="detail-container-data-rating">
-                  <Star />
-                  <Star />
-                  <Star />
-                  <Star />
-                  <StarBorder className="color" />
-                </div>
-              </div>
-            </div>
+        <div className="customer-detail">
+          <div className="customer-detail-model">IPHONE8</div>
+          <div className="detail-container-data-rating customer-detail-star">
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <StarBorder className="color" />
           </div>
+        </div>
+      </div>
+    </div>
         );
       case "c":
         return (

@@ -39,7 +39,8 @@ const TopSellingCountry = () => {
                         height: '500px',
                         width: '100%'
                     }}
-                    zoom={[0,5]}
+                    zoom={[1]}
+                    center={[14.409943, 35.917973]}
                 >
                     <Layer type="symbol" id="marker" layout={{ 'icon-image': 'marker-15' }}>
                         <Feature coordinates={[-95.712891, 37.090240]} />
@@ -49,6 +50,17 @@ const TopSellingCountry = () => {
                         <Feature coordinates={[10.451526, 51.165691]} />
                         <Feature coordinates={[3.4360, 55.3781]} />
                     </Layer>
+                    <Layer id="state-fills" type="fill" sources="states"
+                        paint={{
+                            'fill-color': '#627BC1',
+                            'fill-opacity': [
+                                'case',
+                                ['boolean', ['feature-state', 'hover'], false],
+                                1,
+                                0.5
+                            ]
+                        }}
+                    />
                 </Map>
             </div>
         </ProductLayout>

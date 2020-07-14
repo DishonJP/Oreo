@@ -186,7 +186,9 @@
         opacity: 0.8;
       }
     }
+
   }
+
 }
 .session-one{
   margin: 0 20px;
@@ -222,6 +224,16 @@
     &-margin{
       margin-top: 20px;
     }
+  }
+  .about{
+    span{
+      font-weight: 300;
+      color: $medium-grey;
+    }
+  }
+  .review{
+    display: flex;
+    align-items: center;
   }
 }
 
