@@ -41,22 +41,28 @@ const homeReducer = (state = initialState, action) => {
                 currentProduct: products.find(product => product.id === action.payload)
             }
         case actionTypes.ADD_PRODUCT:
+            localStorage.setItem("product",JSON.stringify([...state.productList,action.payload]))
             return{
                 ...state,
                 productList:[...state.productList,action.payload]
             }
         case actionTypes.REMOVE_PRODUCT:
             const filterData=state.productList.filter(product=>product.id!==action.payload)
+            localStorage.setItem("product",JSON.stringify(filterData))
             return{
                 ...state,
                 productList:filterData
             }
         case actionTypes.SEARCH:
-            console.log(action.payload);
             return{
                 ...state,
                 search:action.payload
-            }            
+            }
+        case actionTypes.GET_PRODUCT:
+            return{
+                ...state,
+                productList:action.payload
+            }                
         default:
             return state;
     }

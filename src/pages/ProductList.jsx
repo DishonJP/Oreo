@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "./Layout";
 import { Divider } from "@material-ui/core";
 import { Edit, Delete, ArrowBack, ArrowForward } from "@material-ui/icons";
 import { connect } from "react-redux";
-import { removeProduct } from "../actions/actionCreator";
+import { removeProduct, getProduct } from "../actions/actionCreator";
 
 const ProductList = (props) => {
-  console.log(props.productList);
+  useEffect(() => {
+    props.getProduct();
+  }, [])
 
   const setColor = (name) => {
     switch (name) {
@@ -87,7 +89,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    handleDelete: (id) => dispatch(removeProduct(id))
+    handleDelete: (id) => dispatch(removeProduct(id)),
+    getProduct:()=>dispatch(getProduct())
   }
 }
 

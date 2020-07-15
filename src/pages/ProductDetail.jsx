@@ -5,10 +5,9 @@ import { Star, StarBorder, Favorite } from "@material-ui/icons";
 import { connect } from "react-redux";
 
 const ProductDetail = (props) => {
-  console.log(props.currentProduct);
 
   const [product, setProduct] = useState(
-    products.filter((el, index) => index < 5)
+    props.productList
   );
   const [currentProduct, setCurrentProduct] = useState(props.currentProduct);
   const [animate, setAnimate] = useState(true);
@@ -41,26 +40,26 @@ const ProductDetail = (props) => {
       case "b":
         return (
           <div className="customer">
-      <img src="../assets/avatar2.jpg" alt="H" />
-      <div>
-        <h4>Hossien Shams</h4>
-        <span>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Officiis distinctio nostrum minima culpa nemo totam
-          voluptatibus.
+            <img src="../assets/avatar2.jpg" alt="H" />
+            <div>
+              <h4>Hossien Shams</h4>
+              <span>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis distinctio nostrum minima culpa nemo totam
+                voluptatibus.
               </span>
-        <div className="customer-detail">
-          <div className="customer-detail-model">IPHONE8</div>
-          <div className="detail-container-data-rating customer-detail-star">
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <StarBorder className="color" />
+              <div className="customer-detail">
+                <div className="customer-detail-model">IPHONE8</div>
+                <div className="detail-container-data-rating customer-detail-star">
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                  <StarBorder className="color" />
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
         );
       case "c":
         return (
@@ -181,7 +180,8 @@ const ProductDetail = (props) => {
 };
 const mapStateToProps = state => {
   return {
-    currentProduct: state.currentProduct
+    currentProduct: state.currentProduct,
+    productList: state.productList
   }
 }
 export default connect(mapStateToProps)(ProductDetail);
